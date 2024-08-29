@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercícios JavaScript</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section class="primeira">
+       <div id="codigo">
+           <p>function calcularIMC() {
+            let nome = window.prompt('Digite o nome da pessoa:')
+            let peso = Number(window.prompt(`Digite o peso de ${nome} em kg:`))
+            let altura = Number(window.prompt(`Digite a altura de ${nome} em metros:`))
+            let imc = peso / (altura * altura)
+            
+            let res1 = document.getElementById('resultado1')
+            res1.innerHTML = `IMC de ${nome}:<br>`
+            res1.innerHTML += `Peso: ${peso} kg, Altura: ${altura} m<br>`
+            res1.innerHTML += `IMC: ${imc.toFixed(2)}<br>`
+            
+            if(imc < 18.5) {
+                res1.innerHTML += `Classificação: Abaixo do peso`
+            } else if(imc < 24.9) {
+                res1.innerHTML += `Classificação: Peso normal`
+            } else if(imc < 29.9) {
+                res1.innerHTML += `Classificação: Sobrepeso`
+            } else {
+                res1.innerHTML += `Classificação: Obesidade`
+            }
+        }</p>
+       </div>
+       <div>
+           <h1>Exercício 1: cálculo de IMC</h1>
+           <p>Clique no botão para calcular o IMC</p>
+           <button onclick="calcularIMC()">Aqui</button>
+       </div>
+       <div id="resultado1">
+           <p>O resultado vai aparecer aqui!</p>
+       </div>
+   </section>
+   <hr>
+   
+   <section class="segunda">
+    <div id="codigo">
+        <p>function mostrarTiposPrimitivos() {
+            Tipos primitivos em JavaScript
+            let nome = "Maria";  String
+            let idade = 28;  Number
+            let casado = false;  Boolean
+            let filhos = null;  Null
+            let endereco;  Undefined
+            let id = Symbol("id");  Symbol
+    
+             Exibindo os tipos primitivos
+            let res2 = document.getElementById('resultado2')
+            res2.innerHTML = `<strong>Tipos Primitivos em JavaScript:</strong><br>`
+            res2.innerHTML += `String: ${nome} <br>`
+            res2.innerHTML += `Number: ${idade} <br>`
+            res2.innerHTML += `Boolean: ${casado} <br>`
+            res2.innerHTML += `Null: ${filhos} <br>`
+            res2.innerHTML += `Undefined: ${endereco} <br>`
+            res2.innerHTML += `Symbol: ${id.toString()} <br>`
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 2: Tipos Primitivos</h1>
+        <p>Clique no botão para ver os tipos primitivos em ação</p>
+        <button onclick="mostrarTiposPrimitivos()">Aqui</button>
+    </div>
+    <div id="resultado2">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="terceira">
+    <div id="codigo">
+        <p>function calcularOperadores() {
+            let num1 = Number(window.prompt('Digite o primeiro número:'))
+            let num2 = Number(window.prompt('Digite o segundo número:'))
+
+            let res3 = document.getElementById('resultado3')
+            res3.innerHTML = `<p><strong>Operadores Aritméticos:</strong></p>`
+            res3.innerHTML += `<p>${num1} + ${num2} = ${num1 + num2}</p>`
+            res3.innerHTML += `<p>${num1} - ${num2} = ${num1 - num2}</p>`
+            res3.innerHTML += `<p>${num1} * ${num2} = ${num1 * num2}</p>`
+            res3.innerHTML += `<p>${num1} / ${num2} = ${num1 / num2}</p>`
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 3: Operadores Aritméticos</h1>
+        <p>Clique no botão para calcular</p>
+        <button onclick="calcularOperadores()">Aqui</button>
+    </div>
+    <div id="resultado3">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="quarta">
+    <div id="codigo">
+        <p>function calcularComparacoes() {
+            let valor1 = Number(window.prompt('Digite o primeiro valor:'))
+            let valor2 = Number(window.prompt('Digite o segundo valor:'))
+
+            let res4 = document.getElementById('resultado4')
+            res4.innerHTML = `<p><strong>Operadores de Comparação:</strong></p>`
+            res4.innerHTML += `<p>${valor1} > ${valor2} = ${valor1 > valor2}</p>`
+            res4.innerHTML += `<p>${valor1} >= ${valor2} = ${valor1 >= valor2}</p>`
+            res4.innerHTML += `<p>${valor1} < ${valor2} = ${valor1 < valor2}</p>`
+            res4.innerHTML += `<p>${valor1} <= ${valor2} = ${valor1 <= valor2}</p>`
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 4: Operadores de Comparação</h1>
+        <p>Clique no botão para calcular as comparações</p>
+        <button onclick="calcularComparacoes()">Aqui</button>
+    </div>
+    <div id="resultado4">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="quinta">
+    <div id="codigo">
+        <p>function calcularLogicos() {
+            let valor1 = window.confirm('Clique em OK para verdadeiro ou Cancelar para falso.')
+            let valor2 = window.confirm('Clique em OK para verdadeiro ou Cancelar para falso.')
+
+            let res5 = document.getElementById('resultado5')
+            res5.innerHTML = `<p><strong>Operadores Lógicos:</strong></p>`
+            res5.innerHTML += `<p>${valor1} && ${valor2} = ${valor1 && valor2}</p>` (Lógico E)
+            res5.innerHTML += `<p>${valor1} || ${valor2} = ${valor1 || valor2}</p>` (Lógico OU)
+            res5.innerHTML += `<p>!${valor1} = ${!valor1}</p>` (Lógico NÃO)
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 5: Operadores Lógicos</h1>
+        <p>Clique no botão para calcular os operadores lógicos</p>
+        <button onclick="calcularLogicos()">Aqui</button>
+    </div>
+    <div id="resultado5">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="sexta">
+    <div id="codigo">
+        <p>function verificarSinal() {
+            let cor = window.prompt('Digite a cor do semáforo (vermelho, amarelo ou verde):').toLowerCase();
+
+            let res6 = document.getElementById('resultado6')
+            res6.innerHTML = `<p><strong>Estado do Semáforo:</strong></p>`
+
+            if (cor === 'vermelho') {
+                res6.innerHTML += `<p>Pare, o semáforo está vermelho.</p>`;
+            } else if (cor === 'amarelo') {
+                res6.innerHTML += `<p>Atenção, o semáforo está amarelo.</p>`;
+            } else if (cor === 'verde') {
+                res6.innerHTML += `<p>Siga, o semáforo está verde.</p>`;
+            } else {
+                res6.innerHTML += `<p>Cor inválida. Por favor, digite vermelho, amarelo ou verde.</p>`;
+            }
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 6: Estruturas Condicionais</h1>
+        <p>Clique no botão para verificar o estado do semáforo</p>
+        <button onclick="verificarSinal()">Aqui</button>
+    </div>
+    <div id="resultado6">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="sétima">
+    <div id="codigo">
+        <p>function estruturasRepeticao() {
+            let resultado = '';
+
+             For
+            resultado += `<p><strong>Estrutura For:</strong></p>`;
+            for (let i = 1; i <= 5; i++) {
+                resultado += `<p>Iteração ${i} com For</p>`;
+            }
+
+             While
+            resultado += `<p><strong>Estrutura While:</strong></p>`;
+            let j = 1;
+            while (j <= 5) {
+                resultado += `<p>Iteração ${j} com While</p>`;
+                j++;
+            }
+
+             Do..While
+            resultado += `<p><strong>Estrutura Do..While:</strong></p>`;
+            let k = 1;
+            do {
+                resultado += `<p>Iteração ${k} com Do..While</p>`;
+                k++;
+            } while (k <= 5);
+
+            let res7 = document.getElementById('resultado7');
+            res7.innerHTML = resultado;
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 7: Estruturas de Repetição</h1>
+        <p>Clique no botão para ver as estruturas de repetição em ação</p>
+        <button onclick="estruturasRepeticao()">Aqui</button>
+    </div>
+    <div id="resultado7">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+<hr>
+
+<section class="oitava">
+    <div id="codigo">
+        <p>function calcularSomaMercadinho() {
+            let total = 0;
+            let continuar = true;
+
+            while (continuar) {
+                let produto = window.prompt('Digite o nome do produto (ou digite "sair" para finalizar):');
+                if (produto.toLowerCase() === 'sair') {
+                    continuar = false;
+                } else {
+                    let preco = parseFloat(window.prompt(`Digite o preço de ${produto}:`));
+                    total += preco;
+                }
+            }
+
+            let res8 = document.getElementById('resultado8');
+            res8.innerHTML = `<p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>`;
+        }</p>
+    </div>
+    <div>
+        <h1>Exercício 8: Funções</h1>
+        <p>Clique no botão para calcular a soma dos preços dos produtos</p>
+        <button onclick="calcularSomaMercadinho()">Aqui</button>
+    </div>
+    <div id="resultado8">
+        <p>O resultado vai aparecer aqui!</p>
+    </div>
+</section>
+
+<script>
+    function calcularSomaMercadinho() {
+        let total = 0;
+        let continuar = true;
+
+        while (continuar) {
+            let produto = window.prompt('Digite o nome do produto (ou digite "sair" para finalizar):');
+            if (produto.toLowerCase() === 'sair') {
+                continuar = false;
+            } else {
+                let preco = parseFloat(window.prompt(`Digite o preço de ${produto}:`));
+                total += preco;
+            }
+        }
+
+        let res8 = document.getElementById('resultado8');
+        res8.innerHTML = `<p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>`;
+    }
+</script>
+
+
+<script>
+    function estruturasRepeticao() {
+        let resultado = '';
+
+        // For
+        resultado += `<p><strong>Estrutura For:</strong></p>`;
+        for (let i = 1; i <= 5; i++) {
+            resultado += `<p>Iteração ${i} com For</p>`;
+        }
+
+        // While
+        resultado += `<p><strong>Estrutura While:</strong></p>`;
+        let j = 1;
+        while (j <= 5) {
+            resultado += `<p>Iteração ${j} com While</p>`;
+            j++;
+        }
+
+        // Do..While
+        resultado += `<p><strong>Estrutura Do..While:</strong></p>`;
+        let k = 1;
+        do {
+            resultado += `<p>Iteração ${k} com Do..While</p>`;
+            k++;
+        } while (k <= 5);
+
+        let res7 = document.getElementById('resultado7');
+        res7.innerHTML = resultado;
+    }
+</script>
+
+<script>
+    function verificarSinal() {
+        let cor = window.prompt('Digite a cor do semáforo (vermelho, amarelo ou verde):').toLowerCase();
+
+        let res6 = document.getElementById('resultado6')
+        res6.innerHTML = `<p><strong>Estado do Semáforo:</strong></p>`
+
+        if (cor === 'vermelho') {
+            res6.innerHTML += `<p>Pare, o semáforo está vermelho.</p>`;
+        } else if (cor === 'amarelo') {
+            res6.innerHTML += `<p>Atenção, o semáforo está amarelo.</p>`;
+        } else if (cor === 'verde') {
+            res6.innerHTML += `<p>Siga, o semáforo está verde.</p>`;
+        } else {
+            res6.innerHTML += `<p>Cor inválida. Por favor, digite vermelho, amarelo ou verde.</p>`;
+        }
+    }
+</script>
+
+<script>
+    function calcularLogicos() {
+        let valor1 = window.confirm('Clique em OK para verdadeiro ou Cancelar para falso.')
+        let valor2 = window.confirm('Clique em OK para verdadeiro ou Cancelar para falso.')
+
+        let res5 = document.getElementById('resultado5')
+        res5.innerHTML = `<p><strong>Operadores Lógicos:</strong></p>`
+        res5.innerHTML += `<p>${valor1} && ${valor2} = ${valor1 && valor2}</p>` // Lógico E
+        res5.innerHTML += `<p>${valor1} || ${valor2} = ${valor1 || valor2}</p>` // Lógico OU
+        res5.innerHTML += `<p>!${valor1} = ${!valor1}</p>` // Lógico NÃO
+    }
+</script>
+
+<script>
+    function calcularComparacoes() {
+        let valor1 = Number(window.prompt('Digite o primeiro valor:'))
+        let valor2 = Number(window.prompt('Digite o segundo valor:'))
+
+        let res4 = document.getElementById('resultado4')
+        res4.innerHTML = `<p><strong>Operadores de Comparação:</strong></p>`
+        res4.innerHTML += `<p>${valor1} > ${valor2} = ${valor1 > valor2}</p>`
+        res4.innerHTML += `<p>${valor1} >= ${valor2} = ${valor1 >= valor2}</p>`
+        res4.innerHTML += `<p>${valor1} < ${valor2} = ${valor1 < valor2}</p>`
+        res4.innerHTML += `<p>${valor1} <= ${valor2} = ${valor1 <= valor2}</p>`
+    }
+</script>
+
+<script>
+    function calcularOperadores() {
+        let num1 = Number(window.prompt('Digite o primeiro número:'))
+        let num2 = Number(window.prompt('Digite o segundo número:'))
+
+        let res3 = document.getElementById('resultado3')
+        res3.innerHTML = `<p><strong>Operadores Aritméticos:</strong></p>`
+        res3.innerHTML += `<p>${num1} + ${num2} = ${num1 + num2}</p>`
+        res3.innerHTML += `<p>${num1} - ${num2} = ${num1 - num2}</p>`
+        res3.innerHTML += `<p>${num1} * ${num2} = ${num1 * num2}</p>`
+        res3.innerHTML += `<p>${num1} / ${num2} = ${num1 / num2}</p>`
+    }
+</script>
+
+<script>
+    function mostrarTiposPrimitivos() {
+        // Tipos primitivos em JavaScript
+        let nome = "Maria"; // String
+        let idade = 28; // Number
+        let casado = false; // Boolean
+        let filhos = null; // Null
+        let endereco; // Undefined
+        let id = Symbol("id"); // Symbol
+
+        // Exibindo os tipos primitivos
+        let res2 = document.getElementById('resultado2')
+        res2.innerHTML = `<strong>Tipos Primitivos em JavaScript:</strong><br>`
+        res2.innerHTML += `String: ${nome} <br>`
+        res2.innerHTML += `Number: ${idade} <br>`
+        res2.innerHTML += `Boolean: ${casado} <br>`
+        res2.innerHTML += `Null: ${filhos} <br>`
+        res2.innerHTML += `Undefined: ${endereco} <br>`
+        res2.innerHTML += `Symbol: ${id.toString()} <br>`
+    }
+</script>
+   <script>
+       function calcularIMC() {
+           let nome = window.prompt('Digite o nome da pessoa:')
+           let peso = Number(window.prompt(`Digite o peso de ${nome} em kg:`))
+           let altura = Number(window.prompt(`Digite a altura de ${nome} em metros:`))
+           let imc = peso / (altura * altura)
+           
+           let res1 = document.getElementById('resultado1')
+           res1.innerHTML = `IMC de ${nome}:<br>`
+           res1.innerHTML += `Peso: ${peso} kg, Altura: ${altura} m<br>`
+           res1.innerHTML += `IMC: ${imc.toFixed(2)}<br>`
+           
+           if(imc < 18.5) {
+               res1.innerHTML += `Classificação: Abaixo do peso`
+           } else if(imc < 24.9) {
+               res1.innerHTML += `Classificação: Peso normal`
+           } else if(imc < 29.9) {
+               res1.innerHTML += `Classificação: Sobrepeso`
+           } else {
+               res1.innerHTML += `Classificação: Obesidade`
+           }
+       }
+   </script>
+
+</body>
+</html>

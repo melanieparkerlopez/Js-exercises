@@ -1,0 +1,85 @@
+body{
+    text-align: center;
+    background-color: #760abe;
+    color:#d38ae6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ 
+ 
+ button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #383B42;
+    color: aliceblue;
+    font-weight: 600;
+ }
+ 
+ 
+ .primeira{
+    display: flex;
+    justify-content: space-around;
+ }
+ 
+ .segunda{
+    display: flex;
+    justify-content: space-around;
+ }
+ 
+ .terceira{
+    display: flex;
+    justify-content: space-around;
+ }
+ 
+ .quarta{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .quinta{
+    display: flex;
+    justify-content: space-around;
+    }
+
+ .sexta{
+    display: flex;
+    justify-content: space-around;
+     }
+
+ .sétima{
+   display: flex;
+   justify-content: space-around;
+    }
+ 
+ .oitava{
+    display: flex;
+    justify-content: space-around;
+    }  
+    
+
+ #resultado1, #resultado2, #resultado3, #resultado4, #resultado5,  #resultado6, #resultado7, #resultado8{
+    border-radius: 10px;
+    background-color: #cf7de7;
+    width: 400px;
+    height: 200px;
+    color: #383B42;
+    text-align: c;
+ }
+
+ 
+ #codigo{
+    border-radius: 10px;
+    background-color: #cf7de7;
+    width: 400px;
+    height: 200px;
+    color: #383B42;
+    overflow: auto;
+ }
+ 
+ 
+ b{
+    color: #FF7070; 
+ }
+ 
+ 
